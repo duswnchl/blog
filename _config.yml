@@ -19,9 +19,9 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Yeunjoo's Blog             # the main title
+title: This and That             # the main title
 
-tagline: software engineer. mystery book/commics/video game lover.      # it will display as the sub-title
+tagline: Software engineer @Igalia <br> from Seoul, South Korea        # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   chromium, c++, c, opensource, free software, igalia

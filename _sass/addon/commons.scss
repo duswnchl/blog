@@ -699,7 +699,7 @@ $sidebar-display: "sidebar-display";
       font-weight: 900;
       font-size: 1.5rem;
       letter-spacing: 0.5px;
-      color: rgba(134, 133, 133, 0.99);
+      color: var(--sidebar-active-color);
     }
   }
 
@@ -732,6 +732,7 @@ $sidebar-display: "sidebar-display";
     &.active {
       .nav-link {
         color: var(--sidebar-active-color);
+        font-weight: bold;
       }
     }
 
@@ -1036,6 +1037,7 @@ $sidebar-display: "sidebar-display";
   text-overflow: ellipsis;
   word-break: keep-all;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 #core-wrapper {
