@@ -894,8 +894,9 @@ $sidebar-display: "sidebar-display";
 
   #breadcrumb {
     font-size: 1rem;
-    color: gray;
+    color: #feffff;
     padding-left: 0.5rem;
+    text-transform: uppercase;
 
     a:hover {
       @extend %link-hover;

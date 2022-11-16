@@ -6,16 +6,16 @@
   /* Framework color */
   --body-bg: #fafafa;
   --mask-bg: #c1c3c5;
-  --main-bg: white;
+  --main-bg: #eee2dc;
   --main-border-color: #f3f3f3;
 
   /* Common color */
   --text-color: #34343c;
-  --text-muted-color: gray;
+  --text-muted-color: #a1c3d1;
   --heading-color: black;
   --blockquote-border-color: #eeeeee;
   --blockquote-text-color: #9a9a9a;
-  --link-color: #2a408e;
+  --link-color: #bab2b5;
   --link-underline-color: #dee2e6;
   --button-bg: #ffffff;
   --btn-border-color: #e9ecef;
@@ -26,15 +26,15 @@
   --checkbox-checked-color: #07a8f7;
 
   /* Sidebar */
-  --sidebar-bg: #080f5b;
+  --sidebar-bg: #31708e;
   --sidebar-muted-color: var(--text-muted-color);
-  --sidebar-active-color: #15db95;
+  --sidebar-active-color: #f7f9fb;
   --nav-cursor-color: #757575;
-  --sidebar-btn-bg: #080f5b;
+  --sidebar-btn-bg: var(--sidebar-bg);
 
   /* Topbar */
-  --topbar-text-color: #0d19a3;
-  --topbar-wrapper-bg: #15db95;
+  --topbar-text-color: #feffff;
+  --topbar-wrapper-bg: #687864;
   --search-wrapper-bg: rgb(245, 245, 245, 0.5);
   --search-wrapper-border-color: rgb(245, 245, 245);
   --search-tag-bg: #f8f9fa;
