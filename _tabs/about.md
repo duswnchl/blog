@@ -11,12 +11,12 @@ This blog is mostly professional web site of Yeunjoo Choi.
 - Chromium committer
 - [Igalia](https://www.igalia.com/) prepartner
 
-## (want to be) TL;DR
+## (will be) TL;DR
 I'm Yeunjoo Choi(she/her), a software engineer from Seoul-Korea. I majored in
 electrical engineering and started working at LG Electronics as a software
 engineer.
 
-*... One Eternity Later ...*
+![eternity](/assets/img/eternity.jpg){: width="100%" }
 
 I'm Igalian, which is one of the coolest company in the world, since 2021.
 Nowadays, I am working on Chromium and very happy to contribute to that
