@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tips for using Vim as a chromium IDE
+title: Tips for using Vim as a Chromium IDE
 category:
 - Chromium
 - Tips
@@ -8,28 +8,28 @@ tags:
 - chromium
 - vim
 - igalia-planet
+date: 2022-12-20 15:48 +0900
 ---
 There are lots of powerful IDEs which are broadly used by developers. Vim is a
-text editor, but it can be turned out to be a good IDE with awewome plugins and
-a little bit of configuration.
+text editor, but it can be turned into a good IDE with awesome plugins and a
+little bit of configuration.
 
-Many people prefer using Vim to develop software because of its lightness and
-availability. I am one of them, and always use Vim to develop Chromium. However,
-someone would think that Vim is hard to get to reach the same performance as
-other IDE, since Chromium is a very huge project.
+Many people already prefer using Vim to develop software because of its
+lightness and availability. I am one of them, and always use Vim to develop
+Chromium. However, someone would think that it’s hard to get Vim to reach the
+same performance as other IDEs, since Chromium is a very huge project.
 
-For those and potential users, this post introduces some tips for using Vim as a
+For those potential users, this post introduces some tips for using Vim as a
 Chromium IDE.
 
 > The context of this document is for Linux users who are used to using vim.
 {: .prompt-info }
 
 ## Code Formatting
-
-I strongly recommand to use [vim-codefmt][3] for code formatting. It supports
-most file types in Chromium including GN (See [GN docs][4]). I don't like to use
-autoformat and just bind `:FormatLines` to `ctrl-I` for formating a visual
-block.
+I strongly recommend using [vim-codefmt][3] for code formatting. It supports
+most file types in Chromium including GN (See [GN docs][4]) and autoformatting.
+However, I don't like to use autoformatting and just bind `:FormatLines` to
+`ctrl-I` for formating a selected visual block.
 
 ![codefmt]({% asset_path codefmt.gif %})
 
@@ -49,23 +49,21 @@ filetype plugin indent on
 ```
 
 Chromium provides vimscript files for syntax highliting and file detection of
-Mojom which is the IDL for Mojo interfaces(IPC) among Chromium services.
-
-And `ninja-build.vim` allows you compile a file by `ctrl-O` or build the
-specific target by `:CrBuild` command. See each vim files for details.
+Mojom, which is the IDL for Mojo interfaces (IPC) among Chromium services. And
+`ninja-build.vim` allows you compile a file with `ctrl-O` or build the specific
+target with `:CrBuild` command. See each vim files for details.
 
 ### YouCompleteMe
 
-`tools/vim` has the example configuration for [YouCompleteMe][8] (a code
-completion engine for Vim). I also add follow lines to in a local *.vimrc*.
-(See `tools/vim/chromium.ycm_extra_conf.py`).
+[tools/vim][1] has an example configuration for [YouCompleteMe][8] (a code
+completion engine for Vim). See [tools/vim/chromium.ycm_extra_conf.py][10].
 
 ```sh
 let g:ycm_extra_conf_globlist = ['../.ycm_extra_conf.py']
 let g:ycm_goto_buffer_command = 'split-or-existing-window'
 ```
 
-As you already know, YouCompleteMe requires clangd. Very fortunatley, Chromium
+As you already know, YouCompleteMe requires clangd. Very fortunately, Chromium
 already supports clangd and remote index server to get daily index snapshots.
 
 Do not skip documents about [using Clangd to build chromium][2] and [chromium
@@ -79,10 +77,10 @@ Chromium development.
 
 ## Commenter
 
-A good developer writes good comments, so a good commenter makes you a good
-developer (joke). In my humble opinion, [NERD commenter][5] will make you a good
-developer (joke again). You can get all details from docs of NERD commenter and
-Chromium needs only an additional option for mojo files.
+A good developer writes good comments, so being a good commenter makes you a
+good developer (joke). In my humble opinion, [NERD commenter][5] will make you a
+good developer (joke again). You can get all details from the docs of NERD
+commenter, and Chromium needs only an additional option for mojom.
 
 ```sh
 let g:NERDCustomDelimiters = { 'mojom': {'left': '//'} }
@@ -90,13 +88,13 @@ let g:NERDCustomDelimiters = { 'mojom': {'left': '//'} }
 
 ## File navigation
 
-Chromium is really huge, so we benefit from efficient file navigtion tools.
-There are lots of awesome fuzzy finder plugins for this purpose and I use
-[command-t][6] for a long time. But command-t requires a vim executable with
-ruby/lua support or Neovim. If you need simpler and still powerful one,
-[fzf.vim][7] is an altenative great option.
+Chromium is really huge, so we benefit from efficient file navigation tools.
+There are lots of awesome fuzzy finder plugins for this purpose and I have been
+using [command-t][6] for a long time. But command-t requires a vim executable
+with ruby/lua support or Neovim. If you need a simpler yet still powerful
+navigator, [fzf.vim][7] is an altenative great option.
 
-Since Chromium is the git project, search commands based by `git ls-files` will
+Since Chromium a the git project, search commands based by `git ls-files` will
 provide results very quickly. Use the option `let g:CommandTFileScanner = 'git'`
 for `command-t`, and use the command `:GFiles` for `fzf.vim`.
 
@@ -104,9 +102,9 @@ for `command-t`, and use the command `:GFiles` for `fzf.vim`.
 
 ## Conclusion
 
-Thanks for reading and I hope this blog post can be any help to your development
-enviroment for Chromium. Any comment for sharing some other cool tips always be
-welcomed, so that we can make our vim more productive.
+Thanks for reading and I hope this blog post can be some help to your
+development enviroment for Chromium. Any comment for sharing some other cool
+tips always be welcomed, so that we can make our vim more productive.
 
 .... I will be back someday with debugging Chromium in Vim.
 ![sneak peek]({% asset_path back.png %})
