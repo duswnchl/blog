@@ -8,7 +8,6 @@ tags:
 - chromium
 - vim
 - igalia-planet
-date: 2022-12-20 15:48 +0900
 ---
 There are lots of powerful IDEs which are broadly used by developers. Vim is a
 text editor, but it can be turned into a good IDE with awesome plugins and a
