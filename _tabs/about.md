@@ -4,24 +4,17 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-This blog is mostly professional web site of Yeunjoo Choi.
+This blog might be mostly professional web site of Yeunjoo Choi.
 
 ## Abstract
+- Software engineer from Seoul-Korea
 - C/C++ programmer
-- Chromium committer
+- [Chromium committer](https://chromium-review.googlesource.com/q/owner:ychoi%2540igalia.com+status:merged)
 - [Igalia](https://www.igalia.com/) prepartner
+- she/her pronouns
 
-## (will be) TL;DR
-I'm Yeunjoo Choi(she/her), a software engineer from Seoul-Korea. I majored in
-electrical engineering and started working at LG Electronics as a software
-engineer.
+## My Journey
 
-![eternity](/assets/img/eternity.jpg){: width="100%" }
-
-I'm Igalian, which is one of the coolest company in the world, since 2021.
-Nowadays, I am working on Chromium and very happy to contribute to that
-open-source browser project.
-
-## Contacts
-duswnchl@gmail.com<br>
-ychoi@igalia.com
+| Igalia | Chromium Developer : 2021.01 - now |
+| LG Electronics | Browser Developer for webOS : 2011.01 - 2021.01 |
+| Sogang University | Electrical Engineering (BS/MS) : 2005 - 2010 |
