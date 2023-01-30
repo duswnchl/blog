@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tips for using Vim as a Chromium IDE
+title: Tips for using Vim when developing Chromium
 category:
 - Chromium
 - Tips
@@ -8,6 +8,7 @@ tags:
 - chromium
 - vim
 - igalia-planet
+date: 2023-01-30 11:14 +0900
 ---
 There are lots of powerful IDEs which are broadly used by developers. Vim is a
 text editor, but it can be turned into a good IDE with awesome plugins and a
@@ -18,8 +19,8 @@ lightness and availability. I am one of them, and always use Vim to develop
 Chromium. However, someone would think that it’s hard to get Vim to reach the
 same performance as other IDEs, since Chromium is a very huge project.
 
-For those potential users, this post introduces some tips for using Vim as a
-Chromium IDE.
+For those potential users, this post introduces some tips for using Vim as an
+IDE when developing Chromium.
 
 > The context of this document is for Linux users who are used to using Vim.
 {: .prompt-info }
@@ -35,6 +36,9 @@ map <C-I> :FormatLines<CR>
 ```
 
 ![codefmt]({% asset_path codefmt.gif %})
+
+Another option is using `clang-format` in `depot_tools` by `clang-format.vim` in
+[tools/vim][1]. Please check about [tools/vim][1] at the following section.
 
 ## tools/vim
 
@@ -58,15 +62,14 @@ target with `:CrBuild` command. See each Vim files for details.
 
 ### Running Tests
 
-[tools/autotest.py][10] is very useful when you run tests of Chromium. As the
+[tools/autotest.py][11] is very useful when you run tests of Chromium. As the
 description of the script, `autotest.py` finds the appropriate test suits and
 builds it, then runs it. `!` is an option for running `autotest.py` inside Vim,
 but sometimes it's a hassle to type all parameters. What about to write simple
 commands (or functions) with scripts under `tools/vim`?
 
-This is an example script for running a test for the current line (that I use
-everyday!). Some codes are copied from `ninja-build.vim` and imported from
-`ninja-output.py`.
+This is an example script for running a test for the current line. Some codes
+are copied from `ninja-build.vim` and imported from `ninja-output.py`.
 
 ```sh
 pythonx << endpython
@@ -150,6 +153,11 @@ for `command-t`, and use the command `:GFiles` for `fzf.vim`.
 
 ![filenav]({% asset_path filenav.gif %})
 
+In case you can't depend on `git ls-files` based commands, please make sure your
+plugin use `rg` or `fd` which are the fastest command line search tools. For
+example, [fzf.vim][7] has an option `FZF_DEFAULT_COMMAND` and the following
+suggestion in the manual: `export FZF_DEFAULT_COMMAND='fd --type f'`.
+
 ## Conclusion
 
 Thanks for reading and I hope this blog post can be some help to your
@@ -169,4 +177,5 @@ this is the real purpose of this blog post.)
 [7]: https://github.com/junegunn/fzf
 [8]: https://github.com/ycm-core/YouCompleteMe
 [9]: https://linux.clangd-index.chromium.org/
-[10]: https://source.chromium.org/chromium/chromium/src/+/main:tools/autotest.py
+[10]: https://source.chromium.org/chromium/chromium/src/+/main:tools/vim/chromium.ycm_extra_conf.py
+[11]: https://source.chromium.org/chromium/chromium/src/+/main:tools/autotest.py
